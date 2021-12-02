@@ -70,44 +70,14 @@ pub system_program: Program <'info, System>,
 #[instruction(sign_bump: u8)]
 pub struct Evolve<'info> {
 pub token_metadata_program:AccountInfo<'info>,
-pub meta_data:AccountInfo<'info>,
 #[account(seeds = [b"signtwo".as_ref()],bump=sign_bump)]
 pub signer_account: Account<'info,SignerA>,
 #[account(mut)]
+ pub meta_data:AccountInfo<'info>,
 pub user: Signer<'info>,
 pub system_program: Program <'info, System>,
 }
 
-
-#[account]
-pub struct Meta2 {
-
-pub level: String,
-pub hp: String,
-pub attack: String,
-pub defense: String,
-pub accuracy: String,
-pub speed: String,
-pub specattack: String,
-pub specdefense: String,
-pub item1: String,
-pub item2: String,
-pub item3: String,
-pub item4: String,
-pub item5: String,
-pub item6: String,
-pub item7: String,
-pub item8: String,
-pub item9: String,
-pub item10: String,
-pub world: String,
-pub mutation: String,
-pub image1: String,
-pub image2: String,
-pub image3: String,
-pub dummy: String,
-
-}
 
 #[account]
 pub struct SignerA {
