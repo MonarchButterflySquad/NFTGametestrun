@@ -1,0 +1,12 @@
+[programs.devnet]
+anchorbs = "89DUgEczqCXstqCZcxvn5hquX93n2scxZa61pdk8RjWm"
+
+[registry]
+url = "https://anchor.projectserum.com"
+
+[provider]
+cluster = "devnet"
+wallet = "/home/hugepotatoeland/.config/solana/devnet.json"
+
+[scripts]
+test = "node tests/anchorbs.js" 
